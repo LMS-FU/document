@@ -1,3 +1,14 @@
+# Mục lục
+
+1. [Định nghĩa của Repository Pattern](#định-nghĩa-của-repository-pattern)
+2. [Ví dụ về Repository Pattern](#ví-dụ-về-repository-pattern)
+   - [Interface `IProductRepository`](#interface-iproductrepository)
+   - [Triển khai Repository](#triển-khai-repository)
+3. [Lợi ích của Repository Pattern](#lợi-ích-của-repository-pattern)
+4. [Tóm tắt](#tóm-tắt)
+
+---
+
 # Repository Pattern trong ứng dụng web
 
 Repository Pattern là một pattern rất thường thấy trong các ứng dụng web, đặc biệt khi các kiến trúc như Clean Architecture được phổ biến rộng rãi. Trong các cuộc phỏng vấn mình tham gia, hầu hết mọi người đều sử dụng Repository trong dự án với mục đích "nhằm linh hoạt thay đổi database và tái sử dụng code". Tuy nhiên, câu hỏi đặt ra là:
@@ -35,3 +46,52 @@ public interface IProductRepository
     void Save(Product product);
     void Delete(Product product);
 }
+```
+
+Interface này được đặt ở layer nghiệp vụ (Domain). Lớp nghiệp vụ giao tiếp nội bộ bên trong nó và không biết về việc triển khai lại interface này. Điều này giúp nghiệp vụ được tách bạch khỏi việc triển khai kỹ thuật.
+
+### Triển khai Repository
+
+Triển khai Repository nằm ở lớp hạ tầng (Infrastructure). Điều này giúp nghiệp vụ rõ ràng và linh hoạt hơn trong thiết kế.
+
+```csharp
+public class ProductRepository : IProductRepository
+{
+    private readonly MyDbContext _context;
+
+    public ProductRepository(MyDbContext context)
+    {
+        _context = context;
+    }
+
+    public Product Get(int id)
+    {
+        return _context.Products.Find(id);
+    }
+
+    public void Save(Product product)
+    {
+        _context.Products.Add(product);
+        _context.SaveChanges();
+    }
+
+    public void Delete(Product product)
+    {
+        _context.Products.Remove(product);
+        _context.SaveChanges();
+    }
+}
+```
+
+### Lợi ích của Repository Pattern
+
+- **Tách biệt nghiệp vụ khỏi technical design:** Giúp bạn linh hoạt hơn trong thiết kế khi nghiệp vụ phức tạp.
+- **Linh hoạt trong triển khai:** Repository có thể được implement để gọi API hoặc nâng cấp hạ tầng mà không ảnh hưởng tới nghiệp vụ đã triển khai.
+
+### Tóm tắt
+
+- Repository không phải là ORM. Đừng dùng nó như ORM vì như thế dùng thẳng ORM còn hơn.
+- Repository tách biệt khỏi Technical design, là cầu nối giữa nghiệp vụ và triển khai hệ thống.
+- Nếu dự án nhỏ, không nên sử dụng Repository. Hãy tận dụng trực tiếp các tính năng mạnh mẽ của các ORM như Sequelize hoặc Prisma.
+- Repository khá đơn giản, nhưng nó là cầu nối quan trọng trước khi bạn tiếp cận cách triển khai kiến trúc theo Clean Architecture và Domain Driven Design.
+
