@@ -1,11 +1,12 @@
 # Mục lục
 
-1. [Định nghĩa của Repository Pattern](#định-nghĩa-của-repository-pattern)
-2. [Ví dụ về Repository Pattern](#ví-dụ-về-repository-pattern)
+1. [Repository Pattern trong ứng dụng web](#repository-pattern-trong-ứng-dụng-web)
+2. [Định nghĩa của Repository Pattern](#định-nghĩa-của-repository-pattern)
+3. [Ví dụ về Repository Pattern](#ví-dụ-về-repository-pattern)
    - [Interface `IProductRepository`](#interface-iproductrepository)
    - [Triển khai Repository](#triển-khai-repository)
-3. [Lợi ích của Repository Pattern](#lợi-ích-của-repository-pattern)
-4. [Tóm tắt](#tóm-tắt)
+4. [Lợi ích của Repository Pattern](#lợi-ích-của-repository-pattern)
+5. [Tóm tắt](#tóm-tắt)
 
 ---
 
@@ -25,7 +26,7 @@ Rõ ràng chúng ta có thể sử dụng Service Layer để tái sử dụng c
 
 Đối với một số ORM như TypeORM, việc hỗ trợ sẵn Repository Pattern càng làm chúng ta khó hiểu ý nghĩa thực sự của Repository: liệu có phải là để gom luồng xử lý database vào một chỗ, hay để thay đổi datasource linh hoạt hơn?
 
-## Định nghĩa của Repository Pattern
+# Định nghĩa của Repository Pattern
 
 Theo Martin Fowler trong *Patterns of Enterprise Application Architecture*:
 
@@ -33,11 +34,11 @@ Theo Martin Fowler trong *Patterns of Enterprise Application Architecture*:
 
 Repository nên là một lớp trung gian giữa business logic và lớp hạ tầng (triển khai database hoặc giao tiếp với external service). Các ORM là một ví dụ tiêu biểu cho triển khai giao tiếp database lớp hạ tầng. Bạn có thể thay thế các ORM này tùy theo khẩu vị của bạn (TypeORM, Sequelize, Prisma, etc.).
 
-### Ví dụ về Repository Pattern
+# Ví dụ về Repository Pattern
 
 Giả sử bạn có một đối tượng sản phẩm (Product). Tại layer nghiệp vụ (Domain) của bạn, bạn định nghĩa một đối tượng là `Product`. Đối tượng này khác hoàn toàn với Model (hay Entity) `Product` của ORM (cái đại diện để tương tác với database).
 
-#### Interface `ProductRepository`
+## Interface `ProductRepository`
 
 ```csharp
 public interface IProductRepository
@@ -50,7 +51,7 @@ public interface IProductRepository
 
 Interface này được đặt ở layer nghiệp vụ (Domain). Lớp nghiệp vụ giao tiếp nội bộ bên trong nó và không biết về việc triển khai lại interface này. Điều này giúp nghiệp vụ được tách bạch khỏi việc triển khai kỹ thuật.
 
-### Triển khai Repository
+## Triển khai Repository
 
 Triển khai Repository nằm ở lớp hạ tầng (Infrastructure). Điều này giúp nghiệp vụ rõ ràng và linh hoạt hơn trong thiết kế.
 
@@ -83,12 +84,12 @@ public class ProductRepository : IProductRepository
 }
 ```
 
-### Lợi ích của Repository Pattern
+# Lợi ích của Repository Pattern
 
 - **Tách biệt nghiệp vụ khỏi technical design:** Giúp bạn linh hoạt hơn trong thiết kế khi nghiệp vụ phức tạp.
 - **Linh hoạt trong triển khai:** Repository có thể được implement để gọi API hoặc nâng cấp hạ tầng mà không ảnh hưởng tới nghiệp vụ đã triển khai.
 
-### Tóm tắt
+# Tóm tắt
 
 - Repository không phải là ORM. Đừng dùng nó như ORM vì như thế dùng thẳng ORM còn hơn.
 - Repository tách biệt khỏi Technical design, là cầu nối giữa nghiệp vụ và triển khai hệ thống.
