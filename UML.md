@@ -16,6 +16,13 @@ Một use case diagram sẽ bao gồm các thành phần: Actor, Use Case và Re
   - **Extend:** mô tả một use case bổ sung chức năng cho một use case khác có sẵn.
   - **Generalization:** thể hiện quan hệ thừa kế giữa các use case hoặc các actor với nhau.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0965f479-f99a-45a5-9e53-c5368d74fd8a" alt="image">
+</p>
+<p align="center">
+  <strong>🔴 Usecase Diagram</strong>
+</p>
+
 ### Class Diagram
 Class diagram cung cấp cái nhìn tổng quan về các thành phần, đối tượng trong hệ thống và mối quan hệ giữa chúng, giúp xác định cấu trúc và thiết kế của hệ thống.
 
@@ -38,6 +45,13 @@ Các thành phần chính của một sequence diagram:
 - **Lifeline:** đường thẳng dọc biểu thị sự tồn tại của đối tượng trong quá trình tương tác.
 - **Message (thông điệp):** biểu diễn bằng đường mũi tên, chỉ thông điệp, hành động truyền từ đối tượng này sang đối tượng khác.
 - **Activation:** biểu diễn bằng hình chữ nhật nhỏ trên lifeline chỉ thời gian một đối tượng thực hiện một hành động nào đó.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8f14f474-cb20-4908-80a8-9cc0e7c4cc4d" alt="image">
+</p>
+<p align="center">
+  <strong>🔴 Sequence Diagram</strong>
+</p>
 
 ## Kết luận
 Trong thực tế, hầu hết các dự án phần mềm đều sử dụng UML trong khâu thiết kế, việc này giúp cho quá trình bảo trì và phát triển dự án trở nên dễ dàng hơn. Mỗi loại biểu đồ UML được sử dụng tại các giai đoạn khác nhau trong quá trình phát triển phần mềm. Việc kết hợp linh hoạt các biểu đồ này không chỉ giúp ta hiểu rõ hơn về hệ thống mà còn hỗ trợ quá trình thiết kế và triển khai phần mềm hiệu quả.
