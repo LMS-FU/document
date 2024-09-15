@@ -15,8 +15,8 @@
   
 ### 3. **Lập kế hoạch và giao thời gian**:
 - Mỗi nhóm cần lập kế hoạch công việc chi tiết bao gồm các mốc thời gian quan trọng:
-  - **Giai đoạn 1**: Thiết kế hệ thống và database (1-2 tuần).
-  - **Giai đoạn 2**: Phát triển chức năng chính (2-3 tuần).
+  - **Giai đoạn 1**: Thiết kế hệ thống và database (1-3 tuần).
+  - **Giai đoạn 2**: Phát triển chức năng chính (3-5 tuần).
   - **Giai đoạn 3**: Kiểm thử, tối ưu hóa và hoàn thiện (1-2 tuần).
   
 - **Hạn nộp sản phẩm** và các yêu cầu về báo cáo được giao cụ thể.
