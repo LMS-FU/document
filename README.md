@@ -1,1 +1,5 @@
-# [Tóm tắt về công nghệ, frameworks và tools](https://github.com/LMS-FU/document/blob/main/BackendNote.MD)
+# 1. [Tóm tắt về công nghệ, frameworks và tools](https://github.com/LMS-FU/document/blob/main/BackendNote.MD)
+# 2. [Tìm hiểu về Repository Pattern](https://github.com/LMS-FU/document/blob/main/RepositoryPattern.md)
+# 3. [Tìm hiểu về UML](https://github.com/LMS-FU/document/blob/main/UML.md)
+# 4. [Tìm hiểu về Discord](https://github.com/LMS-FU/document/blob/main/tutorial-discord.md)
+# 5. [Tích hợp Git với Discord](https://github.com/LMS-FU/document/blob/main/Git_Discord.MD)
