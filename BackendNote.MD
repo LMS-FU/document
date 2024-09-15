@@ -1,4 +1,4 @@
-Tóm tắt về công nghệ, frameworks và tools
+**Tóm tắt về công nghệ, frameworks và tools**
 
 # 1. Server-Side Languages
 - **Purpose**: Xử lý logic, xử lý dữ liệu và các hoạt động phía server của các ứng dụng web.
