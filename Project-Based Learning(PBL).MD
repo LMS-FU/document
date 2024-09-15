@@ -1,7 +1,3 @@
-# Hướng dẫn cụ thể về cách triển khai Project-Based Learning (PBL) cho môn Lập trình .NET
-
----
-
 # **Hướng dẫn triển khai Project-Based Learning (PBL) cho môn Lập trình .NET**
 
 ## **I. Giao đề tài cho sinh viên**
