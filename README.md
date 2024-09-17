@@ -24,4 +24,5 @@ Nơi tổng hợp các dự án mẫu và hướng dẫn lập trình thực t�
 # 2. [Tìm hiểu về Repository Pattern](https://github.com/LMS-FU/document/blob/main/RepositoryPattern.md)
 # 3. [Tìm hiểu về UML](https://github.com/LMS-FU/document/blob/main/UML.md)
 # 4. [Tìm hiểu về Discord](https://github.com/LMS-FU/document/blob/main/tutorial-discord.md)
-# 5. [Tích hợp Git với Discord](https://github.com/LMS-FU/document/blob/main/Git_Discord.MD)
+# 5. [Tóm tắt về Git và Cách thức sử dụng](https://github.com/LMS-FU/document/blob/main/tutorial-git.MD)
+# 6. [Tích hợp Git với Discord](https://github.com/LMS-FU/document/blob/main/Git_Discord.MD)
