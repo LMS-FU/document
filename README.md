@@ -26,3 +26,4 @@ Nơi tổng hợp các dự án mẫu và hướng dẫn lập trình thực t�
 # 4. [Tìm hiểu về Discord](https://github.com/LMS-FU/document/blob/main/tutorial-discord.md)
 # 5. [Tóm tắt về Git và Cách thức sử dụng](https://github.com/LMS-FU/document/blob/main/tutorial-git.MD)
 # 6. [Tích hợp Git với Discord](https://github.com/LMS-FU/document/blob/main/Git_Discord.MD)
+# 7. [Hướng dẫn triển khai Project-Based Learning (PBL) cho môn Lập trình .NET](https://github.com/LMS-FU/document/blob/main/Project-Based%20Learning(PBL).MD)
