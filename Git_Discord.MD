@@ -5,7 +5,7 @@
 2. Vào **Server Settings** → **Integrations** → **Webhooks**.
 3. Nhấn **Create Webhook**:
    - Đặt tên webhook và chọn kênh mà bạn muốn gửi thông báo.
-   - Sao chép **Webhook URL** (đây là URL mà GitHub sẽ sử dụng để gửi thông báo).
+   - Sao chép **Webhook URL** (đây là URL mà GitHub sẽ sử dụng để gửi thông báo). Chú ý thêm đoạn text "/github" vào cuối URL
    - Nhấn **Save**.
 
 ## Bước 2: Thiết lập Webhook trên GitHub
