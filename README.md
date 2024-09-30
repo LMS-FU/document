@@ -29,3 +29,4 @@ Nơi tổng hợp các dự án mẫu và hướng dẫn lập trình thực t�
 ## 7. [Hướng dẫn triển khai Project-Based Learning (PBL) cho môn Lập trình .NET](https://github.com/LMS-FU/document/blob/main/Project-Based%20Learning(PBL).MD)
 ## 8. Tìm hiểu về Report
 ### 8.1 Report 1: [Scope và Limit trong Phát Triển Ứng Dụng](https://github.com/LMS-FU/document/blob/main/scope_and_limit.md)
+### 8.2 Report 3: [Phân biệt Chức năng và Tính năng](https://github.com/LMS-FU/document/blob/main/Function_Feature.md)
