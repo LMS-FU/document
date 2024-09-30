@@ -20,12 +20,12 @@ Nơi tổng hợp các dự án mẫu và hướng dẫn lập trình thực t�
 
 ---
 
-# 1. [Tóm tắt về công nghệ, frameworks và tools](https://github.com/LMS-FU/document/blob/main/BackendNote.MD)
-# 2. [Tìm hiểu về Repository Pattern](https://github.com/LMS-FU/document/blob/main/RepositoryPattern.md)
-# 3. [Tìm hiểu về UML](https://github.com/LMS-FU/document/blob/main/UML.md)
-# 4. [Tìm hiểu về Discord](https://github.com/LMS-FU/document/blob/main/tutorial-discord.md)
-# 5. [Tóm tắt về Git và Cách thức sử dụng](https://github.com/LMS-FU/document/blob/main/tutorial-git.MD)
-# 6. [Tích hợp Git với Discord](https://github.com/LMS-FU/document/blob/main/Git_Discord.MD)
-# 7. [Hướng dẫn triển khai Project-Based Learning (PBL) cho môn Lập trình .NET](https://github.com/LMS-FU/document/blob/main/Project-Based%20Learning(PBL).MD)
-# 8. Tìm hiểu về Report
-# 8.1 Report 1: [Scope và Limit trong Phát Triển Ứng Dụng](https://github.com/LMS-FU/document/blob/main/scope_and_limit.md)
+## 1. [Tóm tắt về công nghệ, frameworks và tools](https://github.com/LMS-FU/document/blob/main/BackendNote.MD)
+## 2. [Tìm hiểu về Repository Pattern](https://github.com/LMS-FU/document/blob/main/RepositoryPattern.md)
+## 3. [Tìm hiểu về UML](https://github.com/LMS-FU/document/blob/main/UML.md)
+## 4. [Tìm hiểu về Discord](https://github.com/LMS-FU/document/blob/main/tutorial-discord.md)
+## 5. [Tóm tắt về Git và Cách thức sử dụng](https://github.com/LMS-FU/document/blob/main/tutorial-git.MD)
+## 6. [Tích hợp Git với Discord](https://github.com/LMS-FU/document/blob/main/Git_Discord.MD)
+## 7. [Hướng dẫn triển khai Project-Based Learning (PBL) cho môn Lập trình .NET](https://github.com/LMS-FU/document/blob/main/Project-Based%20Learning(PBL).MD)
+## 8. Tìm hiểu về Report
+### 8.1 Report 1: [Scope và Limit trong Phát Triển Ứng Dụng](https://github.com/LMS-FU/document/blob/main/scope_and_limit.md)
