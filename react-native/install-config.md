@@ -28,6 +28,13 @@ Sau đó, thêm vào biến Path giá trị
 - Mở Android Studio > Folder Android đã cài đặt ở phần 1.
 - Vào File > Project Structure > SDK Location.
 Ở phần JDK location, chọn đường dẫn đến thư mục JDK 21 mà bạn vừa cài đặt (ví dụ: C:\Program Files\Java\jdk-21).
+
+![image](https://github.com/user-attachments/assets/e49bd923-0bf5-4736-b0bd-4da6547a9445)
+
+![image](https://github.com/user-attachments/assets/a9d5bdc6-817c-417a-93fa-b25da9fa1a19)
+
+![image](https://github.com/user-attachments/assets/08595c98-25cb-4017-b17f-fdc51d84cf18)
+
 - Đồng bộ lại dự án: Sau khi cấu hình JDK 21, bạn có thể nhấp vào nút Try Again hoặc Sync Project with Gradle Files trong Android Studio để thử đồng bộ và build lại dự án.
 
 ### 4. Xử lý lỗi
