@@ -42,6 +42,9 @@ Sau đó, thêm vào biến Path giá trị
 npm start
 ```
 
+![image](https://github.com/user-attachments/assets/80522a2f-88e6-4944-82fe-9930845ea81f)
+
+
 ### 4. Xử lý lỗi
 
 __1. Lỗi liên quan đến việc Gradle không thể di chuyển một không gian làm việc tạm thời khi xây dựng dự án React Native__
