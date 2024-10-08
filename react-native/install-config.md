@@ -36,5 +36,49 @@ Sau đó, thêm vào biến Path giá trị
 ![image](https://github.com/user-attachments/assets/08595c98-25cb-4017-b17f-fdc51d84cf18)
 
 - Đồng bộ lại dự án: Sau khi cấu hình JDK 21, bạn có thể nhấp vào nút Try Again hoặc Sync Project with Gradle Files trong Android Studio để thử đồng bộ và build lại dự án.
+- Quay lại Visual Code, tại Terminal của Folder React Native gõ lệnh chạy
+
+```typescript
+npm start
+```
 
 ### 4. Xử lý lỗi
+
+__1. Lỗi liên quan đến việc Gradle không thể di chuyển một không gian làm việc tạm thời khi xây dựng dự án React Native__
+
+- Xóa thư mục .gradle trong thư mục Android của dự án
+
+```typescript
+cd android
+./gradlew clean
+```
+
+__2. Lỗi requires JDK17 or higher__
+
+- Cài đặt JDK 21
+- Thiết lập biến môi trường JAVA_HOME (Windows)
+- Kiểm tra phiên bản JDK
+```typescript
+java -version
+```
+- Cấu hình Android Studio để sử dụng JDK
+- Đồng bộ lại dự án
+
+__3. Kiểm tra lại các gói trong node_modules__
+
+Vì lỗi đến từ node_modules, bạn nên thử xóa và cài đặt lại các gói này để đảm bảo không có gói nào bị hỏng.
+- Xóa thư mục node_modules
+- Xóa cả cache npm và cài đặt lại:
+```typescript
+npm cache clean --force
+npm install
+```
+__4. Xóa và đồng bộ lại Gradle__
+
+Có thể xóa thư mục .gradle để loại bỏ các tập tin cache có thể gây lỗi và thử đồng bộ lại dự án:
+
+```typescript
+rm -rf .gradle
+./gradlew clean
+./gradlew build
+```
