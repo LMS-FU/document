@@ -49,7 +49,7 @@ npm start
 
 ### 4. Xử lý lỗi
 
-__1. Lỗi liên quan đến việc Gradle không thể di chuyển một không gian làm việc tạm thời khi xây dựng dự án React Native__
+__4.1. Lỗi liên quan đến việc Gradle không thể di chuyển một không gian làm việc tạm thời khi xây dựng dự án React Native__
 
 - Xóa thư mục .gradle trong thư mục Android của dự án
 
@@ -58,7 +58,7 @@ cd android
 ./gradlew clean
 ```
 
-__2. Lỗi requires JDK17 or higher__
+__4.2. Lỗi requires JDK17 or higher__
 
 - Cài đặt JDK 21
 - Thiết lập biến môi trường JAVA_HOME (Windows)
@@ -69,7 +69,7 @@ java -version
 - Cấu hình Android Studio để sử dụng JDK
 - Đồng bộ lại dự án
 
-__3. Kiểm tra lại các gói trong node_modules__
+__4.3. Kiểm tra lại các gói trong node_modules__
 
 Vì lỗi đến từ node_modules, bạn nên thử xóa và cài đặt lại các gói này để đảm bảo không có gói nào bị hỏng.
 - Xóa thư mục node_modules
@@ -78,7 +78,7 @@ Vì lỗi đến từ node_modules, bạn nên thử xóa và cài đặt lại 
 npm cache clean --force
 npm install
 ```
-__4. Xóa và đồng bộ lại Gradle__
+__4.4. Xóa và đồng bộ lại Gradle__
 
 Có thể xóa thư mục .gradle để loại bỏ các tập tin cache có thể gây lỗi và thử đồng bộ lại dự án:
 
