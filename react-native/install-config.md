@@ -44,6 +44,8 @@ npm start
 
 ![image](https://github.com/user-attachments/assets/80522a2f-88e6-4944-82fe-9930845ea81f)
 
+![image](https://github.com/user-attachments/assets/a1b2838d-28b0-48b7-8105-5c3a676d4865)
+
 
 ### 4. Xử lý lỗi
 
