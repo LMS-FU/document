@@ -189,4 +189,5 @@ dependencies {
 - __Cấu Hình Mạnh Mẽ và Tự Động Hóa Quy Trình__: Với Gradle, bạn có thể dễ dàng tạo nhiều biến thể (variants) của ứng dụng, tối ưu hóa quá trình build cho từng môi trường khác nhau.
 - __Tích Hợp Với Android Studio__: Gradle được tích hợp trực tiếp vào Android Studio, giúp quy trình build, kiểm thử và triển khai ứng dụng trở nên mượt mà và hiệu quả hơn.
 - __Build Cache và Incremental Build__: Giúp giảm thời gian build và cải thiện hiệu suất.
+
 Gradle là công cụ không thể thiếu khi phát triển ứng dụng Android, giúp bạn tự động hóa các quy trình, quản lý phụ thuộc, và dễ dàng cấu hình nhiều biến thể của ứng dụng, từ đó tăng hiệu quả trong việc phát triển và triển khai ứng dụng Android.
