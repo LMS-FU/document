@@ -30,10 +30,10 @@ Mapbox hỗ trợ nhiều loại tile khác nhau, được sử dụng cho mục
 - Mapbox Tiles được tải về từ các máy chủ Mapbox khi người dùng tương tác với bản đồ.
 - Để hiển thị bản đồ, ứng dụng sẽ yêu cầu các tile từ server tùy vào vị trí và mức zoom mà người dùng đang xem. Sau đó, các tile này sẽ được ghép lại để tạo thành bản đồ hoàn chỉnh.
 - Các tile có thể được lưu vào bộ nhớ đệm để tối ưu hiệu suất và giảm thời gian tải trong những lần xem tiếp theo.
-8. Ứng Dụng của Mapbox Tile
-- Ứng dụng Bản Đồ Tương Tác: Các tile cho phép hiển thị bản đồ một cách mượt mà và phản hồi nhanh, thích hợp cho các ứng dụng bản đồ tương tác như Google Maps hoặc OpenStreetMap.
-- Phân Tích Địa Lý: Dữ liệu từ vector tiles có thể được sử dụng để phân tích địa lý, ví dụ như tìm kiếm điểm quan tâm, tính toán khoảng cách hoặc phân tích hành vi người dùng dựa trên vị trí.
-- Hiển Thị Địa Hình: Với terrain tiles, các ứng dụng có thể hiển thị địa hình 3D, giúp người dùng có cái nhìn trực quan hơn về khu vực.
+### 8. Ứng Dụng của Mapbox Tile
+- __Ứng dụng Bản Đồ Tương Tác__: Các tile cho phép hiển thị bản đồ một cách mượt mà và phản hồi nhanh, thích hợp cho các ứng dụng bản đồ tương tác như Google Maps hoặc OpenStreetMap.
+- __Phân Tích Địa Lý__: Dữ liệu từ vector tiles có thể được sử dụng để phân tích địa lý, ví dụ như tìm kiếm điểm quan tâm, tính toán khoảng cách hoặc phân tích hành vi người dùng dựa trên vị trí.
+- __Hiển Thị Địa Hình__: Với terrain tiles, các ứng dụng có thể hiển thị địa hình 3D, giúp người dùng có cái nhìn trực quan hơn về khu vực.
 ### 9. Ví Dụ Về Sử Dụng Mapbox Tile
 Dưới đây là một ví dụ về việc sử dụng Mapbox GL JS để tạo một bản đồ và hiển thị các vector tiles:
 ```typescript
@@ -47,7 +47,7 @@ const map = new mapboxgl.Map({
 
 ```
 
-Mapbox cung cấp một số tileset miễn phí, nhưng cũng có các tileset cao cấp yêu cầu thanh toán. Các tileset miễn phí chủ yếu dùng cho bản đồ cơ bản và thử nghiệm, trong khi các tileset cao cấp bao gồm dữ liệu biên giới, địa hình, hoặc dữ liệu phân tích chi tiết hơn. Bạn có thể bắt đầu với tài khoản miễn phí để thử nghiệm Mapbox. Để biết thêm thông tin, hãy truy cập ["Mapbox Tileset Guide"]("https://docs.mapbox.com/data/tilesets/guides/").
+Mapbox cung cấp một số tileset miễn phí, nhưng cũng có các tileset cao cấp yêu cầu thanh toán. Các tileset miễn phí chủ yếu dùng cho bản đồ cơ bản và thử nghiệm, trong khi các tileset cao cấp bao gồm dữ liệu biên giới, địa hình, hoặc dữ liệu phân tích chi tiết hơn. Bạn có thể bắt đầu với tài khoản miễn phí để thử nghiệm Mapbox. Để biết thêm thông tin, hãy truy cập [Mapbox Tileset Guide](https://docs.mapbox.com/data/tilesets/guides/).
 
 Để hiển thị tọa độ các biển báo giao thông tại thành phố Đà Nẵng trên Mapbox, bạn có thể làm theo các bước sau:
 
@@ -99,6 +99,7 @@ trafficSigns.features.forEach((feature) => {
 __Các bước chi tiết__:
 - __Tạo Mapbox Map__: Sử dụng mapboxgl.Map() để tạo bản đồ, chỉ định style và trung tâm bản đồ.
 - __Thêm Markers__: Sử dụng mapboxgl.Marker() để thêm biển báo giao thông, cùng với thông tin chi tiết trong popup.
+
 __Lưu ý__
 - __Access Token__: Bạn cần đăng ký và lấy Mapbox Access Token từ Mapbox.
 - __Dữ liệu tọa độ__: Phải có danh sách tọa độ chính xác của các biển báo giao thông. Dữ liệu này có thể lấy từ cơ quan giao thông hoặc thu thập thực tế.
