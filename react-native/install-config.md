@@ -5,6 +5,8 @@
 - New Folder, cmd Folder đó để gõ lệnh sau:
 ```typescript
 npx react-native@latest init AwesomeProject
+or
+npx @react-native-community/cli init AwesomeProject
 ```
 - Add Folder to Workspace ( __AwesomeProject__ ) vào trong Visual Studio Code để dễ quản lý
 - Nếu quá trình cài lỗi thì thực hiện dòng lệnh sau trong terminal để Clean the Gradle cache và try rebuilding
