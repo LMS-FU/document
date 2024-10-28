@@ -89,3 +89,14 @@ rm -rf .gradle
 ./gradlew clean
 ./gradlew build
 ```
+
+__4.5. Giải pháp để thay đổi thư mục cache mặc định của Gradle sang ổ D__
+Bạn có thể thay đổi vị trí của thư mục cache của Gradle sang ổ đĩa khác (như ổ D) bằng cách chỉnh sửa tệp gradle.properties hoặc cấu hình thông qua dòng lệnh. Dưới đây là các cách để làm điều đó:
+
+__Sử dụng biến môi trường:__
+
+Bạn cũng có thể thiết lập biến môi trường GRADLE_USER_HOME trỏ đến thư mục bạn muốn trên ổ D.
+Truy cập System Properties > Environment Variables > New (trong User variables), và thêm:
+Variable name: GRADLE_USER_HOME
+Variable value: D:\gradle-cache (hoặc vị trí bạn muốn).
+Cần thì khởi động lại máy
