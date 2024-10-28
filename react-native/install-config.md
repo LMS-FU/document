@@ -91,6 +91,7 @@ rm -rf .gradle
 ```
 
 __4.5. Giải pháp để thay đổi thư mục cache mặc định của Gradle sang ổ D__
+
 Bạn có thể thay đổi vị trí của thư mục cache của Gradle sang ổ đĩa khác (như ổ D) bằng cách chỉnh sửa tệp gradle.properties hoặc cấu hình thông qua dòng lệnh. Dưới đây là các cách để làm điều đó:
 
 __Sử dụng biến môi trường:__
