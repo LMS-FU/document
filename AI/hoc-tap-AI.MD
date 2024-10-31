@@ -8,14 +8,14 @@
 6. [Thực hành Dự án Ứng dụng AI](#thực-hành-dự-án-ứng-dụng-ai)
 7. [Đánh giá và Tổng kết](#đánh-giá-và-tổng-kết)
 
-1. **Giới thiệu về Trí tuệ Nhân tạo (AI)**
+### 1. Giới thiệu về Trí tuệ Nhân tạo (AI)
     - **Nội dung:**
       - Giới thiệu khái niệm về AI, các loại AI, và các ứng dụng phổ biến trong đời sống.
       - Lợi ích của AI trong học tập, tìm kiếm thông tin, và sáng tạo nội dung.
     - **Thời lượng:** 1 buổi.
     - **Phương pháp:** Học lý thuyết và xem các ví dụ thực tế về AI.
 
-2. **Các Khái niệm Cơ bản trong AI**
+### 2. Các Khái niệm Cơ bản trong AI
     - **Nội dung:**
       - Hiểu về Machine Learning, Deep Learning, và các mô hình AI cơ bản.
       - Giới thiệu các công cụ AI phổ biến: Google Colab, Python, các thư viện AI như TensorFlow, Keras.
