@@ -114,11 +114,23 @@ Nếu bạn muốn thay thế các thay đổi cục bộ:
 git checkout -- <tên-tập-tin>
 ```
 
+__Chuyển nhánh__
+
+```javascript
+git checkout -b 'tên nhánh'
+```
+
 Hoặc hủy tất cả các thay đổi và lấy lại lịch sử từ repository remote:
 
 ```javascript
 git fetch origin
 git reset --hard origin/master
+```
+
+## The error "refusing to merge unrelated histories"
+
+```javascript
+git pull origin main --allow-unrelated-histories
 ```
 
 ## Các gợi ý hữu ích
