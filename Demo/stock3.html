@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Vantage Stock Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <h1>Biểu đồ giá cổ phiếu AAPL (Apple)</h1>
+    <canvas id="stockChart" width="600" height="400"></canvas>
+
+    <script>
+        const apiKey = "YCCQ8XYU7CLVN7QA"; // Thay YOUR_API_KEY bằng API Key của bạn từ Alpha Vantage
+        const symbol = "AAPL"; // Mã cổ phiếu của Apple
+        const interval = "1min"; // Lấy dữ liệu theo từng giờ
+
+        // Cấu hình biểu đồ với Chart.js
+        const ctx = document.getElementById('stockChart').getContext('2d');
+        const stockChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Giá cổ phiếu AAPL',
+                    data: [],
+                    borderColor: 'blue',
+                    fill: false,
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Thời gian'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Giá (USD)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Hàm lấy dữ liệu giá cổ phiếu từ Alpha Vantage và cập nhật biểu đồ
+        async function fetchStockData() {
+            try {
+                const response = await fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=${interval}&apikey=${apiKey}`);
+                const data = await response.json();
+
+                const timeSeries = data[`Time Series (${interval})`];
+                if (!timeSeries) {
+                    console.error("Lỗi khi lấy dữ liệu:", data);
+                    alert("Không thể tải dữ liệu. Kiểm tra lại API Key hoặc giới hạn yêu cầu.");
+                    return;
+                }
+
+                // Xử lý dữ liệu để hiển thị trên biểu đồ
+                const labels = [];
+                const prices = [];
+                for (let timestamp in timeSeries) {
+                    labels.unshift(timestamp);
+                    prices.unshift(parseFloat(timeSeries[timestamp]["4. close"]));
+                }
+
+                // Cập nhật dữ liệu trên biểu đồ
+                stockChart.data.labels = labels;
+                stockChart.data.datasets[0].data = prices;
+                stockChart.update();
+            } catch (error) {
+                console.error("Lỗi khi lấy dữ liệu:", error);
+                alert("Không thể tải dữ liệu. Vui lòng thử lại sau.");
+            }
+        }
+
+        // Gọi hàm fetchStockData để tải dữ liệu và hiển thị biểu đồ
+        fetchStockData();
+    </script>
+
+</body>
+</html>

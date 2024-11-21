@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT Stock Chart</title>
+</head>
+<body>
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div id="tradingview_fpt"></div>
+        <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/symbols/HOSE-FPT/" rel="noopener" target="_blank">
+                <span class="blue-text">FPT Stock Chart</span>
+            </a> by TradingView
+        </div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+            new TradingView.widget({
+                "width": 980,                // Width of the chart
+                "height": 610,               // Height of the chart
+                "symbol": "HOSE:FPT",        // Symbol for FPT on HOSE
+                "interval": "D",             // Chart interval (D for daily)
+                "timezone": "Asia/Ho_Chi_Minh", // Vietnam timezone
+                "theme": "light",            // Theme: light or dark
+                "style": "1",                // Chart style: 1 for candlestick
+                "locale": "vi",              // Language set to Vietnamese
+                "toolbar_bg": "#f1f3f6",     // Background color of the toolbar
+                "enable_publishing": false,  // Disable publish idea option
+                "allow_symbol_change": false, // Disable symbol change to lock on FPT
+                "studies": ["RSI@tv-basicstudies"], // Add RSI indicator
+                "container_id": "tradingview_fpt"
+            });
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+</body>
+</html>

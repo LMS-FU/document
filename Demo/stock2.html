@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT Stock Price</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <h1>Giá cổ phiếu AAPL (Apple)</h1>
+    <p id="price">Giá hiện tại: Đang tải...</p>
+    <canvas id="stockChart" width="400" height="200"></canvas>
+
+    <script>
+        const apiKey = "cshohepr01qg5burvdqgcshohepr01qg5burvdr0"; // Thay YOUR_API_KEY bằng API Key của bạn từ Finnhub
+        const symbol = "AAPL"; // Mã cổ phiếu của Apple
+        const updateInterval = 60000; // Cập nhật mỗi phút (60000ms)
+
+        // Khởi tạo dữ liệu cho biểu đồ
+        const labels = []; // Danh sách thời gian
+        const dataPoints = []; // Danh sách giá
+
+        // Cấu hình biểu đồ với Chart.js
+        const ctx = document.getElementById('stockChart').getContext('2d');
+        const stockChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Giá cổ phiếu AAPL',
+                    data: dataPoints,
+                    borderColor: 'blue',
+                    fill: false,
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Thời gian'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Giá (USD)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Hàm để lấy dữ liệu giá cổ phiếu và cập nhật biểu đồ
+        async function fetchStockData() {
+            try {
+                const response = await fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${apiKey}`);
+                const data = await response.json();
+
+                const currentPrice = data.c;
+                const currentTime = new Date().toLocaleTimeString();
+
+                // Hiển thị giá hiện tại
+                document.getElementById("price").innerText = `Giá hiện tại: ${currentPrice} USD`;
+
+                // Thêm dữ liệu mới vào biểu đồ
+                labels.push(currentTime);
+                dataPoints.push(currentPrice);
+
+                // Giới hạn dữ liệu hiển thị (20 điểm gần nhất)
+                if (labels.length > 20) {
+                    labels.shift();
+                    dataPoints.shift();
+                }
+
+                // Cập nhật biểu đồ
+                stockChart.update();
+            } catch (error) {
+                console.error("Lỗi khi lấy dữ liệu:", error);
+                document.getElementById("price").innerText = "Không thể tải dữ liệu";
+            }
+        }
+
+        // Gọi hàm fetchStockData lần đầu
+        fetchStockData();
+
+        // Thiết lập tự động cập nhật dữ liệu mỗi phút
+        setInterval(fetchStockData, updateInterval);
+    </script>
+
+</body>
+</html>
