@@ -1,6 +1,7 @@
 __Thế hệ lập trình viên tiếp theo sẽ là kiến trúc sư, không chỉ là coder!__
 
 Trong lịch sử phát triển phần mềm, con lắc luôn đung đưa giữa hai cực:
+
 • Thời kì đầu: tất cả đều bắt đầu bằng đặc tả, sơ đồ kiến trúc chi li. Mỗi thay đổi giống như điều khiển một con tàu chở hàng khổng lồ – chậm chạp, cồng kềnh và đầy giấy tờ.
 
 • Kỷ nguyên Agile: con lắc vọt sang hướng ngược lại. “Working software over comprehensive documentation” trở thành khẩu hiệu. Chúng ta coi tốc độ, thử nghiệm nhanh quan trọng hơn tính hoàn hảo. Và đúng, điều đó đã mở ra năng suất khổng lồ, định hình văn hoá phần mềm suốt hai thập kỷ.
