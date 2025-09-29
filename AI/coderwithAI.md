@@ -1,4 +1,4 @@
-__ Thế hệ lập trình viên tiếp theo sẽ là kiến trúc sư, không chỉ là coder! __
+__Thế hệ lập trình viên tiếp theo sẽ là kiến trúc sư, không chỉ là coder!__
 
 Trong lịch sử phát triển phần mềm, con lắc luôn đung đưa giữa hai cực:
 • Thời kì đầu: tất cả đều bắt đầu bằng đặc tả, sơ đồ kiến trúc chi li. Mỗi thay đổi giống như điều khiển một con tàu chở hàng khổng lồ – chậm chạp, cồng kềnh và đầy giấy tờ.
